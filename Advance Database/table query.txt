@@ -1,0 +1,81 @@
+create table Manager
+(M_ID number(10) constraint Manager_pk Primary key,
+M_name varchar2(25),
+M_phone number(11),
+M_Password varchar2(20),
+M_Approval varchar2(10))
+
+
+
+
+Admin 
+
+create table Admin
+(A_ID number(10) constraint Admin_pk Primary key,
+A_name varchar2(25),
+A_username varchar2(25),
+A_phone number(11),
+A_Password varchar2(20),
+A_Address varchar2(50))
+
+
+
+Inventory
+create table Inventory
+(P_ID number(10) constraint Inventory_pk Primary key,
+P_name varchar2(25),
+P_Quantity number(11),
+P_Price number(20),
+Stock varchar2(20),
+Image varchar2(100))
+
+Order
+
+create table ProductOrder
+(O_ID number(10) constraint Order_pk Primary key,
+P_name varchar2(25),
+P_Price number(20))
+
+
+
+Waiter
+
+create table WAITER
+(W_ID number(10) constraint WAITER_pk Primary key,
+W_name varchar2(25),
+W_SALARY varchar2(25),
+W_phone number(11),
+W_Password varchar2(20))
+
+
+
+Ice Cream
+
+create table IceCream
+(I_ID number(10) constraint IceCream_pk Primary key,
+I_name varchar2(25),
+I_Price number(20),
+I_Flavour varchar2(20),
+Image varchar2(100))
+
+
+create table IceCreamOrder
+(O_ID number(10) constraint Order_pk Primary key,
+I_name varchar2(25),
+I_Price number(20),
+I_Flavour varchar2(20),
+WaiterName varchar2(100))
+
+
+CREATE TABLE BILL
+(
+    B_ID int NOT NULL PRIMARY KEY,
+    B_DATETIME varchar2(10) NOT NULL,
+    B_AMOUNT varchar2(10) NOT NULL,
+    W_NAME varchar2(10) NOT NULL,
+    O_Id INT NOT NULL,
+    O_NAME varchar2(10) NOT NULL,
+    O_FLAVOUR varchar2(10) NOT NULL
+
+);
+
